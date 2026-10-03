@@ -21,9 +21,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
                 pbsp.setMaPhienBan(rs.getString("MaPhienBan"));
                 pbsp.setMaSP(rs.getString("MaSP"));
                 pbsp.setMauSac(rs.getString("MauSac"));
-                pbsp.setCongSuat(rs.getString("CongSuat"));
-                pbsp.setPin(rs.getString("Pin"));
-                pbsp.setKetNoi(rs.getString("KetNoi"));
+                pbsp.setRam(rs.getString("Ram"));
+                pbsp.setBoNhoTrong(rs.getString("BoNhoTrong"));
+                pbsp.setDungLuongPin(rs.getString("DungLuongPin"));
                 pbsp.setGiaNhap(rs.getDouble("GiaNhap"));
                 pbsp.setGiaBan(rs.getDouble("GiaBan"));
                 pbsp.setSoLuongTon(rs.getInt("SoLuongTon"));
@@ -53,9 +53,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
                         rs.getString("MaPhienBan"),
                         rs.getString("MaSP"),
                         rs.getString("MauSac"),
-                        rs.getString("CongSuat"),
-                        rs.getString("Pin"),
-                        rs.getString("KetNoi"),
+                        rs.getString("Ram"),
+                        rs.getString("BoNhoTrong"),
+                        rs.getString("DungLuongPin"),
                         rs.getDouble("GiaNhap"),
                         rs.getDouble("GiaBan"),
                         rs.getInt("SoLuongTon"),
@@ -80,9 +80,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
             stmt.setString(1, pbsp.getMaPhienBan());
             stmt.setString(2, pbsp.getMaSP());
             stmt.setString(3, pbsp.getMauSac());
-            stmt.setString(4, pbsp.getCongSuat());
-            stmt.setString(5, pbsp.getPin());
-            stmt.setString(6, pbsp.getKetNoi());
+            stmt.setString(4, pbsp.getRam());
+            stmt.setString(5, pbsp.getBoNhoTrong());
+            stmt.setString(6, pbsp.getDungLuongPin());
             stmt.setDouble(7, pbsp.getGiaNhap());
             stmt.setDouble(8, pbsp.getGiaBan());
             stmt.setInt(9, pbsp.getSoLuongTon());
@@ -102,9 +102,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
         try (Connection conn = DatabaseHelper.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, pbsp.getMauSac());
-            stmt.setString(2, pbsp.getCongSuat());
-            stmt.setString(3, pbsp.getPin());
-            stmt.setString(4, pbsp.getKetNoi());
+            stmt.setString(2, pbsp.getRam());
+            stmt.setString(3, pbsp.getBoNhoTrong());
+            stmt.setString(4, pbsp.getDungLuongPin());
             stmt.setDouble(5, pbsp.getGiaNhap());
             stmt.setDouble(6, pbsp.getGiaBan());
             stmt.setInt(7, pbsp.getSoLuongTon());
@@ -160,9 +160,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
                         rs.getString("MaPhienBan"),
                         rs.getString("MaSP"),
                         rs.getString("MauSac"),
-                        rs.getString("CongSuat"),
-                        rs.getString("Pin"),
-                        rs.getString("KetNoi"),
+                        rs.getString("Ram"),
+                        rs.getString("BoNhoTrong"),
+                        rs.getString("DungLuongPin"),
                         rs.getDouble("GiaNhap"),
                         rs.getDouble("GiaBan"),
                         rs.getInt("SoLuongTon"),
@@ -195,9 +195,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
                         rs.getString("MaPhienBan"),
                         rs.getString("MaSP"),
                         rs.getString("MauSac"),
-                        rs.getString("CongSuat"),
-                        rs.getString("Pin"),
-                        rs.getString("KetNoi"),
+                        rs.getString("Ram"),
+                        rs.getString("BoNhoTrong"),
+                        rs.getString("DungLuongPin"),
                         rs.getDouble("GiaNhap"),
                         rs.getDouble("GiaBan"),
                         rs.getInt("SoLuongTon"),
@@ -314,7 +314,7 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
             while (rs.next()) {
                 PhienBanSanPham pb = new PhienBanSanPham(
                         rs.getString("MaPhienBan"), rs.getString("MaSP"), rs.getString("MauSac"),
-                        rs.getString("CongSuat"), rs.getString("Pin"), rs.getString("KetNoi"),
+                        rs.getString("Ram"), rs.getString("BoNhoTrong"), rs.getString("DungLuongPin"),
                         rs.getDouble("GiaNhap"), rs.getDouble("GiaBan"), rs.getInt("SoLuongTon"),
                         rs.getBoolean("TrangThai"), rs.getString("HinhAnh"));
                 pb.setTenSP(rs.getString("TenSP"));
@@ -398,9 +398,9 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
                 pbsp.setMaPhienBan(rs.getString("MaPhienBan"));
                 pbsp.setMaSP(rs.getString("MaSP"));
                 pbsp.setMauSac(rs.getString("MauSac"));
-                pbsp.setCongSuat(rs.getString("CongSuat"));
-                pbsp.setPin(rs.getString("Pin"));
-                pbsp.setKetNoi(rs.getString("KetNoi"));
+                pbsp.setRam(rs.getString("Ram"));
+                pbsp.setBoNhoTrong(rs.getString("BoNhoTrong"));
+                pbsp.setDungLuongPin(rs.getString("DungLuongPin"));
                 pbsp.setGiaNhap(rs.getDouble("GiaNhap"));
                 pbsp.setGiaBan(rs.getDouble("GiaBan"));
                 pbsp.setSoLuongTon(rs.getInt("SoLuongTon"));

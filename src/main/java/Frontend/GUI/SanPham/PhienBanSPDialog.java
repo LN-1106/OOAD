@@ -227,8 +227,8 @@ public class PhienBanSPDialog extends JDialog {
 
                 for (PhienBanSanPham pb : listPhienBan) {
                         model.addRow(new Object[] {
-                                        pb.getMaPhienBan(), pb.getMauSac(), pb.getCongSuat(), pb.getPin(),
-                                        pb.getKetNoi(), formatter.format(pb.getGiaNhap()),
+                                        pb.getMaPhienBan(), pb.getMauSac(), pb.getRam(), pb.getDungLuongPin(),
+                                        pb.getBoNhoTrong(), formatter.format(pb.getGiaNhap()),
                                         formatter.format(pb.getGiaBan()), pb.getSoLuongTon()
                         });
                 }

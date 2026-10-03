@@ -112,7 +112,7 @@ CREATE TABLE PhienBanSP (
     MaSP VARCHAR(20),
     MauSac VARCHAR(50),
     Ram VARCHAR(20),          -- Thêm mới (VD: 8GB, 12GB)
-    BaoNhoTrong VARCHAR(20),   -- Thêm mới (VD: 128GB, 256GB)
+    BoNhoTrong VARCHAR(20),   -- Thêm mới (VD: 128GB, 256GB)
     DungLuongPin VARCHAR(50),  -- Sửa lại (VD: 5000mAh)
     GiaNhap DOUBLE,
     GiaBan DOUBLE,

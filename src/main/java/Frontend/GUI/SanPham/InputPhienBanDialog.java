@@ -1,13 +1,17 @@
 package Frontend.GUI.SanPham;
 
-import Frontend.Compoent.ThaoTacDialog;
+import java.awt.Window;
+
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 import Backend.BUS.PhienBanSanPhamBUS;
 import Backend.DTO.PhienBanSanPham;
-import javax.swing.*;
-import java.awt.*;
+import Frontend.Compoent.ThaoTacDialog;
 
 public class InputPhienBanDialog extends ThaoTacDialog {
-    private JTextField txtMaPB, txtMauSac, txtCongSuat, txtPin, txtKetNoi, txtGiaNhap, txtGiaBan, txtSoLuong;
+    private JTextField txtMaPB, txtMauSac, txtRam, txtDungLuongPin, txtBoNhoTrong, txtGiaNhap, txtGiaBan, txtSoLuong;
     private PhienBanSanPhamBUS pbBUS = new PhienBanSanPhamBUS();
     private boolean isUpdate = false;
     private boolean isSuccess = false;
@@ -41,17 +45,17 @@ public class InputPhienBanDialog extends ThaoTacDialog {
         txtMauSac = new JTextField();
         pnlContent.add(txtMauSac, "growx,h 35!");
 
-        pnlContent.add(new JLabel("Công Suất:"));
-        txtCongSuat = new JTextField();
-        pnlContent.add(txtCongSuat, "growx,h 35!");
+        pnlContent.add(new JLabel("Ram:"));
+        txtRam = new JTextField();
+        pnlContent.add(txtRam, "growx,h 35!");
 
         pnlContent.add(new JLabel("Dung Lượng Pin:"));
-        txtPin = new JTextField();
-        pnlContent.add(txtPin, "growx,h 35!");
+        txtDungLuongPin = new JTextField();
+        pnlContent.add(txtDungLuongPin, "growx,h 35!");
 
-        pnlContent.add(new JLabel("Kết Nối:"));
-        txtKetNoi = new JTextField();
-        pnlContent.add(txtKetNoi, "growx,h 35!");
+        pnlContent.add(new JLabel("Bộ nhớ trong:"));
+        txtBoNhoTrong = new JTextField();
+        pnlContent.add(txtBoNhoTrong, "growx,h 35!");
 
         pnlContent.add(new JLabel("Giá Nhập:"));
         txtGiaNhap = new JTextField();
@@ -82,9 +86,9 @@ public class InputPhienBanDialog extends ThaoTacDialog {
             pb.setMaPhienBan(txtMaPB.getText().trim());
             pb.setMaSP(this.maSP);
             pb.setMauSac(txtMauSac.getText().trim());
-            pb.setCongSuat(txtCongSuat.getText().trim());
-            pb.setPin(txtPin.getText().trim());
-            pb.setKetNoi(txtKetNoi.getText().trim());
+            pb.setRam(txtRam.getText().trim());
+            pb.setBoNhoTrong(txtBoNhoTrong.getText().trim());
+            pb.setDungLuongPin(txtDungLuongPin.getText().trim());
             pb.setGiaNhap(giaNhap);
             pb.setGiaBan(giaBan);
             pb.setSoLuongTon(Integer.parseInt(txtSoLuong.getText().trim()));
@@ -112,9 +116,9 @@ public class InputPhienBanDialog extends ThaoTacDialog {
             return;
         txtMaPB.setText(pb.getMaPhienBan());
         txtMauSac.setText(pb.getMauSac());  
-        txtCongSuat.setText(pb.getCongSuat());
-        txtPin.setText(pb.getPin());
-        txtKetNoi.setText(pb.getKetNoi());
+        txtRam.setText(pb.getRam());
+        txtDungLuongPin.setText(pb.getDungLuongPin());
+        txtBoNhoTrong.setText(pb.getBoNhoTrong());
         txtGiaNhap.setText(String.format("%.0f", pb.getGiaNhap()));
         txtGiaBan.setText(String.format("%.0f", pb.getGiaBan()));
         txtSoLuong.setText(String.valueOf(pb.getSoLuongTon()));

@@ -6,9 +6,9 @@ public class PhienBanSanPham {
     private String maPhienBan;
     private String maSP;
     private String mauSac;
-    private String congSuat;
-    private String pin;
-    private String ketNoi;
+    private String ram;
+    private String boNhoTrong;
+    private String dungLuongPin;
     private double giaNhap;
     private double giaBan;
     private int soLuongTon;
@@ -20,14 +20,14 @@ public class PhienBanSanPham {
     }
 
     public PhienBanSanPham(String maPhienBan, String maSP, String mauSac,
-            String congSuat, String pin, String ketNoi,
+            String ram, String boNhoTrong, String dungLuongPin,
             double giaNhap, double giaBan, int soLuongTon, boolean trangThai, String hinhAnh) {
         this.maPhienBan = maPhienBan;
         this.maSP = maSP;
         this.mauSac = mauSac;
-        this.congSuat = congSuat;
-        this.pin = pin;
-        this.ketNoi = ketNoi;
+        this.ram = ram;
+        this.boNhoTrong = boNhoTrong;
+        this.dungLuongPin = dungLuongPin;
         this.giaNhap = giaNhap;
         this.giaBan = giaBan;
         this.soLuongTon = soLuongTon;
@@ -60,28 +60,28 @@ public class PhienBanSanPham {
         this.mauSac = mauSac;
     }
 
-    public String getCongSuat() {
-        return congSuat;
+    public String getRam() {
+        return ram;
     }
 
-    public void setCongSuat(String congSuat) {
-        this.congSuat = congSuat;
+    public void setRam(String ram) {
+        this.ram = ram;
     }
 
-    public String getPin() {
-        return pin;
+    public String getBoNhoTrong() {
+        return boNhoTrong;
     }
 
-    public void setPin(String pin) {
-        this.pin = pin;
+    public void setBoNhoTrong(String boNhoTrong) {
+        this.boNhoTrong = boNhoTrong;
     }
 
-    public String getKetNoi() {
-        return ketNoi;
+    public String getDungLuongPin() {
+        return dungLuongPin;
     }
 
-    public void setKetNoi(String ketNoi) {
-        this.ketNoi = ketNoi;
+    public void setDungLuongPin(String dungLuongPin) {
+        this.dungLuongPin = dungLuongPin;
     }
 
     public double getGiaNhap() {
@@ -144,10 +144,13 @@ public class PhienBanSanPham {
 
     @Override
     public String toString() {
-        return "PhienBanSPDTO{" +
+        return "PhienBanSanPham{" +
                 "maPhienBan='" + maPhienBan + '\'' +
                 ", maSP='" + maSP + '\'' +
                 ", mauSac='" + mauSac + '\'' +
+                ", ram='" + ram + '\'' +
+                ", boNhoTrong='" + boNhoTrong + '\'' +
+                ", dungLuongPin='" + dungLuongPin + '\'' +
                 ", giaNhap=" + giaNhap +
                 ", giaBan=" + giaBan +
                 ", soLuongTon=" + soLuongTon +
