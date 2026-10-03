@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS quanlyamthanh CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS quanlydienthoai CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-USE quanlyamthanh;
+USE quanlydienthoai;
 
 -- --------------------------------------------------------
 
@@ -111,9 +111,9 @@ CREATE TABLE PhienBanSP (
     MaPhienBan VARCHAR(20) PRIMARY KEY,
     MaSP VARCHAR(20),
     MauSac VARCHAR(50),
-    CongSuat VARCHAR(50),     -- VD: 80W, 40W
-    Pin VARCHAR(50),          -- VD: 30h, 20h
-    KetNoi VARCHAR(100),      -- VD: Bluetooth 5.2
+    Ram VARCHAR(20),          -- Thêm mới (VD: 8GB, 12GB)
+    BaoNhoTrong VARCHAR(20),   -- Thêm mới (VD: 128GB, 256GB)
+    DungLuongPin VARCHAR(50),  -- Sửa lại (VD: 5000mAh)
     GiaNhap DOUBLE,
     GiaBan DOUBLE,
     SoLuongTon INT DEFAULT 0,
@@ -451,79 +451,34 @@ INSERT INTO TaiKhoan (TenDangNhap, MatKhau, MaNV, MaNhomQuyen, TrangThai) VALUES
 -- --------------------------------------------------------
 
 INSERT INTO LoaiSP VALUES 
-('L01', 'Loa Bluetooth'),
-('L02', 'Tai nghe Over-ear'),
-('L03', 'Phụ kiện âm thanh');
+('L01', 'Smartphone'),
+('L02', 'Điện thoại phổ thông'),
+('L03', 'Phụ kiện');
 
 INSERT INTO HangSX VALUES 
-('H01', 'Marshall', 'Anh'),
-('H02', 'Sony', 'Nhật'),
-('H03', 'JBL', 'Mỹ');
+('H01', 'Apple', 'Mỹ'),
+('H02', 'Samsung', 'Hàn Quốc'),
+('H03', 'Xiaomi', 'Trung Quốc');
 
 INSERT INTO SanPham (MaSP, TenSP, MaLoai, MaHang, MoTa, ThoiGianBaoHanh, TrangThai, HinhAnh) VALUES 
-('SP001', 'Marshall Stanmore III', 'L01', 'H01', 'Loa decor cực đẹp', 12, TRUE, 'marshall.jpg'),
-('SP002', 'Sony WH-1000XM5', 'L02', 'H02', 'Chống ồn đỉnh cao', 12, TRUE, 'sony_xm5.jpg'),
-('SP003', 'JBL Boombox 3', 'L01', 'H03', 'Loa di động công suất lớn, kháng nước IP67', 12, TRUE, 'jbl_boombox3.jpg'),
-('SP004', 'Marshall Emberton II', 'L01', 'H01', 'Loa cầm tay nhỏ gọn, pin 30h', 12, TRUE, 'marshall_emberton_2.jpg'),
-('SP005', 'Marshall Middleton', 'L01', 'H01', 'Loa Bluetooth 4 loa cực mạnh', 12, TRUE, 'marshall_middleton.jpg'),
-('SP006', 'Sony SRS-XE300', 'L01', 'H02', 'Loa chống nước, âm thanh rộng', 12, TRUE, 'sony_xe300.jpg'),
-('SP007', 'Sony WH-CH720N', 'L02', 'H02', 'Tai nghe chống ồn giá rẻ', 12, TRUE, 'sony_ch720n.jpg'),
-('SP008', 'JBL Charge 5', 'L01', 'H03', 'Loa Bluetooth kiêm sạc dự phòng', 12, TRUE, 'jbl_charge5.jpg'),
-('SP009', 'JBL PartyBox Encore', 'L01', 'H03', 'Loa kèm 2 Micro hát karaoke', 12, TRUE, 'jbl_encore.jpg'),
-('SP010', 'JBL Flip 6', 'L01', 'H03', 'Loa di động âm thanh 2 đường tiếng', 12, TRUE, 'jbl_flip6.jpg'),
-('SP011', 'JBL Go 3', 'L01', 'H03', 'Loa mini chống nước', 12, TRUE, 'jbl_go3.jpg'),
-('SP012', 'Apple AirPods Pro 2', 'L02', 'H03', 'Chống ồn chủ động', 12, TRUE, 'airpods_pro.jpg'),
-('SP013', 'Sennheiser HD 450BT', 'L02', 'H02', 'Âm thanh chi tiết, pin 30h', 24, TRUE, 'sennheiser_hd450.jpg'),
-('SP014', 'Bose QuietComfort 45', 'L02', 'H03', 'Khử tiếng ồn đỉnh cao', 12, TRUE, 'bose_qc45.jpg'),
-('SP015', 'JBL Tune 510BT', 'L02', 'H03', 'Bass mạnh, giá sinh viên', 12, TRUE, 'jbl_510bt.jpg'),
-('SP016', 'Sony WH-1000XM4', 'L02', 'H02', 'Bản nâng cấp huyền thoại', 12, TRUE, 'sony_xm4.jpg'),
-('SP017', 'Marshall Major IV', 'L02', 'H01', 'Pin 80h, sạc không dây', 12, TRUE, 'marshall_major4.jpg'),
-('SP018', 'AirPods Max', 'L02', 'H03', 'Tai nghe Over-ear cao cấp', 12, TRUE, 'airpods_max.jpg'),
-('SP019', 'Micro Shure SM58', 'L03', 'H03', 'Micro vocal chuyên nghiệp', 12, TRUE, 'shure_sm58.jpg'),
-('SP020', 'Cáp Audio 3.5mm Ugreen', 'L03', 'H02', 'Dây bọc dù chống nhiễu', 6, TRUE, 'ugreen_35.jpg'),
-('SP021', 'Giá treo tai nghe Gỗ', 'L03', 'H01', 'Decor gỗ Walnut sang trọng', 0, TRUE, 'stand_wood.jpg'),
-('SP022', 'Bao da Marshall Willen', 'L03', 'H01', 'Bao bảo vệ silicon', 3, TRUE, 'case_willen.jpg'),
-('SP023', 'Micro JBL PBM100', 'L03', 'H03', 'Micro karaoke có dây', 12, TRUE, 'jbl_pbm100.jpg'),
-('SP024', 'Cáp sạc Type-C bọc thép', 'L03', 'H02', 'Sạc siêu bền cho loa', 6, TRUE, 'cable_c.jpg'),
-('SP025', 'Bộ vệ sinh tai nghe 3 in 1', 'L03', 'H02', 'Dạng bút vệ sinh tiện lợi', 0, TRUE, 'cleaning_kit.jpg'),
-('SP026', 'Jack chuyển 6.35mm sang 3.5mm', 'L03', 'H02', 'Mạ vàng cao cấp', 6, TRUE, 'jack_convert.jpg'),
-('SP027', 'Túi đựng loa JBL Charge', 'L03', 'H03', 'Chống sốc EVA cao cấp', 3, TRUE, 'bag_jbl.jpg');
+('SP001', 'iPhone 15 Pro Max', 'L01', 'H01', 'Khung Titan, Chip A17 Pro', 12, TRUE, 'iphone15promax.jpg'),
+('SP002', 'Samsung Galaxy S24 Ultra', 'L01', 'H02', 'Bút S-Pen, Galaxy AI', 12, TRUE, 's24ultra.jpg'),
+('SP003', 'Xiaomi 14', 'L01', 'H03', 'Camera Leica, Snapdragon 8 Gen 3', 18, TRUE, 'xiaomi14.jpg'),
+('SP004', 'iPad Air 5 M1', 'L02', 'H01', 'Màn hình Liquid Retina 10.9 inch', 12, TRUE, 'ipad_air5.jpg');
 
-
+-- LƯU Ý: Thứ tự cột của PhienBanSP là (MaPhienBan, MaSP, MauSac, Ram, BaoNhoTrong, DungLuongPin, GiaNhap, GiaBan, SoLuongTon, TrangThai, HinhAnh)
 INSERT INTO PhienBanSP VALUES 
-('PB001', 'SP001', 'Kem (Cream)', '80W', 'N/A', 'Bluetooth 5.2', 7000000, 9500000, 0, TRUE, 'marshall.jpg'),
-('PB002', 'SP002', 'Đen (Black)', 'N/A', '30h', 'Bluetooth 5.2', 7000000, 9500000, 0, TRUE, 'sony_xm5.jpg'),
-('PB003', 'SP003', 'Đen (Black)', '180W', '24h', 'Bluetooth 5.3', 8500000, 11900000, 0, TRUE, 'jbl_boombox3.jpg'),
-('PB004', 'SP004', 'Đen Brass', '20W', '30h', 'Bluetooth 5.1', 3200000, 4500000, 0, TRUE, 'marshall_emberton_2.jpg'),
-('PB005', 'SP005', 'Đen (Black)', '60W', '20h', 'Bluetooth 5.1', 6500000, 8500000, 0, TRUE, 'marshall_middleton.jpg'),
-('PB006', 'SP006', 'Xám (Grey)', '30W', '24h', 'Bluetooth 5.2', 2800000, 3900000, 0, TRUE, 'sony_xe300.jpg'),
-('PB007', 'SP007', 'Xanh (Blue)', 'N/A', '35h', 'Bluetooth 5.2', 1800000, 2500000, 5, TRUE, 'sony_ch720n.jpg'),
-('PB008', 'SP008', 'Đen (Black)', '40W', '20h', 'Bluetooth 5.1', 3000000, 3900000, 0, TRUE, 'jbl_charge5.jpg'),
-('PB009', 'SP009', 'Đen (Black)', '100W', '10h', 'Bluetooth 5.1', 5800000, 7500000, 0, TRUE, 'jbl_encore.jpg'),
-('PB010', 'SP010', 'Đỏ (Red)', '20W', '12h', 'Bluetooth 5.1', 2200000, 2900000, 0, TRUE, 'jbl_flip6.jpg'),
-('PB011', 'SP011', 'Xanh quân đội', '4.2W', '5h', 'Bluetooth 5.1', 800000, 1050000, 0, TRUE, 'jbl_go3.jpg'),
-('PB012', 'SP012', 'Trắng', 'N/A', '6h', 'Bluetooth 5.3', 4500000, 5900000, 0, TRUE, 'airpods_pro.jpg'),
-('PB013', 'SP013', 'Đen', 'N/A', '30h', 'Bluetooth 5.0', 2800000, 3500000, 0, TRUE, 'sennheiser_hd450.jpg'),
-('PB014', 'SP014', 'Trắng', 'N/A', '24h', 'Bluetooth 5.1', 5500000, 7200000, 0, TRUE, 'bose_qc45.jpg'),
-('PB015', 'SP015', 'Hồng', 'N/A', '40h', 'Bluetooth 5.0', 700000, 1200000, 0, TRUE, 'jbl_510bt.jpg'),
-('PB016', 'SP016', 'Bạc', 'N/A', '30h', 'Bluetooth 5.0', 5000000, 6500000, 0, TRUE, 'sony_xm4.jpg'),
-('PB017', 'SP017', 'Nâu da', 'N/A', '80h', 'Bluetooth 5.0', 3000000, 4200000, 0, TRUE, 'marshall_major4.jpg'),
-('PB018', 'SP018', 'Xanh Sky', 'N/A', '20h', 'Bluetooth 5.0', 10000000, 13500000, 0, TRUE, 'airpods_max.jpg'),
-('PB019', 'SP019', 'Xám', 'N/A', 'N/A', 'XLR', 2100000, 2800000, 0, TRUE, 'shure_sm58.jpg'),
-('PB020', 'SP020', 'Đen', 'N/A', 'N/A', '3.5mm', 150000, 250000, 0, TRUE, 'ugreen_35.jpg'),
-('PB021', 'SP021', 'Gỗ Walnut', 'N/A', 'N/A', 'N/A', 300000, 550000, 0, TRUE, 'stand_wood.jpg'),
-('PB022', 'SP022', 'Đen', 'N/A', 'N/A', 'Silicon', 100000, 190000, 0, TRUE, 'case_willen.jpg'),
-('PB023', 'SP023', 'Đen', 'N/A', 'N/A', 'Cáp 3m', 700000, 950000, 0, TRUE, 'jbl_pbm100.jpg'),
-('PB024', 'SP024', 'Đỏ', '60W', 'N/A', 'Type-C', 120000, 220000, 0, TRUE, 'cable_c.jpg'),
-('PB025', 'SP025', 'Nhiều màu', 'N/A', 'N/A', 'N/A', 50000, 95000, 0, TRUE, 'cleaning_kit.jpg'),
-('PB026', 'SP026', 'Vàng', 'N/A', 'N/A', 'Mạ vàng', 80000, 150000, 0, TRUE, 'jack_convert.jpg'),
-('PB027', 'SP027', 'Đen', 'N/A', 'N/A', 'Vải Canvas', 200000, 350000, 0, TRUE, 'bag_jbl.jpg');
+('PB001', 'SP001', 'Titan Tự Nhiên', '8GB', '256GB', '4422 mAh', 27000000, 31990000, 0, TRUE, 'iphone15_titan.jpg'),
+('PB002', 'SP001', 'Đen Titan', '8GB', '512GB', '4422 mAh', 32000000, 37990000, 0, TRUE, 'iphone15_black.jpg'),
+('PB003', 'SP002', 'Xám Titanium', '12GB', '256GB', '5000 mAh', 25000000, 29990000, 0, TRUE, 's24_xam.jpg'),
+('PB004', 'SP003', 'Xanh Lá', '12GB', '256GB', '4610 mAh', 18000000, 22990000, 0, TRUE, 'xiaomi14_green.jpg'),
+('PB005', 'SP004', 'Xám Space', '8GB', '64GB', '28.6 Wh', 12000000, 14990000, 0, TRUE, 'ipad_air5_gray.jpg');
 -- --------------------------------------------------------
 
 INSERT INTO NhaCungCap (MaNCC, TenNCC, DiaChi, Sdt) VALUES 
-('NCC001', 'Marshall VN Dist', 'Q1, TP.HCM', '0283333089'),
-('NCC002', 'B&O', 'Q7, TP.HCM', '0961254087'),
-('NCC003', 'Bose', 'Hà Nội', '0991299099');
+('NCC001', 'FPT Synnex', 'Q1, TP.HCM', '0283333089'),
+('NCC002', 'Digiworld (DGW)', 'Q3, TP.HCM', '0961254087'),
+('NCC003', 'Viettel Distribution', 'Hà Nội', '0991299099');
 
 INSERT INTO PhieuNhap (MaPhieuNhap, MaNV, MaNCC) VALUES 
 ('PN001', 'NV001', 'NCC001');
@@ -596,31 +551,10 @@ INSERT INTO ChiTietBaoHanh (MaCTBH, MaBH, NoiDung, TinhTrang) VALUES
 
 INSERT INTO NCC_SanPham VALUES 
 ('NCC001', 'SP001'), 
-('NCC003', 'SP003'),
-('NCC001', 'SP004'), 
-('NCC001', 'SP005'), 
-('NCC002', 'SP006'), 
-('NCC002', 'SP007'), 
-('NCC003', 'SP008'), 
-('NCC003', 'SP009'), 
-('NCC003', 'SP010'),
-('NCC003', 'SP011'), 
-('NCC003', 'SP012'), 
-('NCC002', 'SP013'), 
-('NCC003', 'SP014'), 
-('NCC003', 'SP015'), 
-('NCC002', 'SP016'), 
-('NCC001', 'SP017'), 
-('NCC003', 'SP018'), 
-('NCC003', 'SP019'), 
-('NCC002', 'SP020'), 
-('NCC001', 'SP021'), 
-('NCC001', 'SP022'), 
-('NCC003', 'SP023'), 
-('NCC002', 'SP024'), 
-('NCC002', 'SP025'), 
-('NCC002', 'SP026'), 
-('NCC003', 'SP027');
+('NCC001', 'SP004'),
+('NCC001', 'SP003'), 
+('NCC002', 'SP002'), 
+('NCC003', 'SP003');
 
 INSERT INTO DoiTra (MaDoiTra, MaKH, MaPhieuXuat, MaImei, NgayDoiTra, LyDo, TrangThai)
 VALUES ('DT001', 'KH001', 'PX001', '111222333', '2026-03-20', 'Loa bị rè bass', 1);
