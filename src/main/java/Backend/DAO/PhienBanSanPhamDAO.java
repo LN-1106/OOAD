@@ -1,9 +1,12 @@
 package Backend.DAO;
 
-import Backend.DatabaseHelper;
-import Backend.DTO.PhienBanSanPham;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
+
+import Backend.DTO.PhienBanSanPham;
+import Backend.DatabaseHelper;
 
 public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
     
@@ -98,7 +101,7 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
 
     @Override
     public int update(PhienBanSanPham pbsp) {
-        String sql = "UPDATE PhienBanSP SET MauSac=?, CongSuat=?, Pin=?, KetNoi=?, GiaNhap=?, GiaBan=?, SoLuongTon=?, HinhAnh=? WHERE MaPhienBan=?";
+        String sql = "UPDATE PhienBanSP SET MauSac=?, Ram=?, DungLuongPin=?, BoNhoTrong=?, GiaNhap=?, GiaBan=?, SoLuongTon=?, HinhAnh=? WHERE MaPhienBan=?";
         try (Connection conn = DatabaseHelper.getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, pbsp.getMauSac());
@@ -366,7 +369,7 @@ public class PhienBanSanPhamDAO implements DAOInterface<PhienBanSanPham> {
             while (rs.next()) {
                 PhienBanSanPham pb = new PhienBanSanPham(
                     rs.getString("MaPhienBan"), rs.getString("MaSP"), rs.getString("MauSac"),
-                        rs.getString("CongSuat"), rs.getString("Pin"), rs.getString("KetNoi"),
+                        rs.getString("Ram"), rs.getString("DungLuongPin"), rs.getString("BoNhoTrong"),
                         rs.getDouble("GiaNhap"), rs.getDouble("GiaBan"), rs.getInt("SoLuongTon"),
                         rs.getBoolean("TrangThai"), rs.getString("HinhAnh"));
                 pb.setTenSP(rs.getString("TenSP"));

@@ -461,18 +461,18 @@ INSERT INTO HangSX VALUES
 ('H03', 'Xiaomi', 'Trung Quốc');
 
 INSERT INTO SanPham (MaSP, TenSP, MaLoai, MaHang, MoTa, ThoiGianBaoHanh, TrangThai, HinhAnh) VALUES 
-('SP001', 'iPhone 15 Pro Max', 'L01', 'H01', 'Khung Titan, Chip A17 Pro', 12, TRUE, 'iphone15promax.jpg'),
-('SP002', 'Samsung Galaxy S24 Ultra', 'L01', 'H02', 'Bút S-Pen, Galaxy AI', 12, TRUE, 's24ultra.jpg'),
-('SP003', 'Xiaomi 14', 'L01', 'H03', 'Camera Leica, Snapdragon 8 Gen 3', 18, TRUE, 'xiaomi14.jpg'),
-('SP004', 'iPad Air 5 M1', 'L02', 'H01', 'Màn hình Liquid Retina 10.9 inch', 12, TRUE, 'ipad_air5.jpg');
+('SP001', 'iPhone 15 Pro Max', 'L01', 'H01', 'Khung Titan, Chip A17 Pro', 12, TRUE, 'iphone-15-128-gbden.webp'),
+('SP002', 'Samsung Galaxy S24 Ultra', 'L01', 'H02', 'Bút S-Pen, Galaxy AI', 12, TRUE, 'iphone-15-pro-256gb.webp'),
+('SP003', 'Xiaomi 14', 'L01', 'H03', 'Camera Leica, Snapdragon 8 Gen 3', 18, TRUE, 'iphone_17_256gb-3_3.jpg'),
+('SP004', 'iPad Air 5 M1', 'L02', 'H01', 'Màn hình Liquid Retina 10.9 inch', 12, TRUE, 'iphone-14-pro_2__5.png');
 
 -- LƯU Ý: Thứ tự cột của PhienBanSP là (MaPhienBan, MaSP, MauSac, Ram, BaoNhoTrong, DungLuongPin, GiaNhap, GiaBan, SoLuongTon, TrangThai, HinhAnh)
 INSERT INTO PhienBanSP VALUES 
-('PB001', 'SP001', 'Titan Tự Nhiên', '8GB', '256GB', '4422 mAh', 27000000, 31990000, 0, TRUE, 'iphone15_titan.jpg'),
-('PB002', 'SP001', 'Đen Titan', '8GB', '512GB', '4422 mAh', 32000000, 37990000, 0, TRUE, 'iphone15_black.jpg'),
-('PB003', 'SP002', 'Xám Titanium', '12GB', '256GB', '5000 mAh', 25000000, 29990000, 0, TRUE, 's24_xam.jpg'),
-('PB004', 'SP003', 'Xanh Lá', '12GB', '256GB', '4610 mAh', 18000000, 22990000, 0, TRUE, 'xiaomi14_green.jpg'),
-('PB005', 'SP004', 'Xám Space', '8GB', '64GB', '28.6 Wh', 12000000, 14990000, 0, TRUE, 'ipad_air5_gray.jpg');
+('PB001', 'SP001', 'Titan Tự Nhiên', '8GB', '256GB', '4422 mAh', 27000000, 31990000, 5, TRUE, 'iphone-15-128-gbden.webp'),
+('PB002', 'SP001', 'Đen Titan', '8GB', '512GB', '4422 mAh', 32000000, 37990000, 5, TRUE, 'iphone-15-128-gbden.webp'),
+('PB003', 'SP002', 'Xám Titanium', '12GB', '256GB', '5000 mAh', 25000000, 29990000, 5, TRUE, 'iphone-15-pro-256gb.webp'),
+('PB004', 'SP003', 'Xanh Lá', '12GB', '256GB', '4610 mAh', 18000000, 22990000, 5, TRUE, 'iphone_17_256gb-3_3.jpg'),
+('PB005', 'SP004', 'Xám Space', '8GB', '64GB', '28.6 Wh', 12000000, 14990000, 5, TRUE, 'iphone-14-pro_2__5.png');
 -- --------------------------------------------------------
 
 INSERT INTO NhaCungCap (MaNCC, TenNCC, DiaChi, Sdt) VALUES 
