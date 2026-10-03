@@ -1,0 +1,20 @@
+# Maven - Thư mục chứa file build (CỰC KỲ QUAN TRỌNG)
+target/
+
+# IDE - Các file cấu hình riêng của VS Code và IntelliJ
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# OS generated files
+Thumbs.db
+.DS_Store
