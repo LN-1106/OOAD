@@ -468,11 +468,11 @@ INSERT INTO SanPham (MaSP, TenSP, MaLoai, MaHang, MoTa, ThoiGianBaoHanh, TrangTh
 
 -- LƯU Ý: Thứ tự cột của PhienBanSP là (MaPhienBan, MaSP, MauSac, Ram, BaoNhoTrong, DungLuongPin, GiaNhap, GiaBan, SoLuongTon, TrangThai, HinhAnh)
 INSERT INTO PhienBanSP VALUES 
-('PB001', 'SP001', 'Titan Tự Nhiên', '8GB', '256GB', '4422 mAh', 27000000, 31990000, 5, TRUE, 'iphone-15-128-gbden.webp'),
-('PB002', 'SP001', 'Đen Titan', '8GB', '512GB', '4422 mAh', 32000000, 37990000, 5, TRUE, 'iphone-15-128-gbden.webp'),
-('PB003', 'SP002', 'Xám Titanium', '12GB', '256GB', '5000 mAh', 25000000, 29990000, 5, TRUE, 'iphone-15-pro-256gb.webp'),
-('PB004', 'SP003', 'Xanh Lá', '12GB', '256GB', '4610 mAh', 18000000, 22990000, 5, TRUE, 'iphone_17_256gb-3_3.jpg'),
-('PB005', 'SP004', 'Xám Space', '8GB', '64GB', '28.6 Wh', 12000000, 14990000, 5, TRUE, 'iphone-14-pro_2__5.png');
+('PB001', 'SP001', 'Titan Tự Nhiên', '8GB', '256GB', '4422 mAh', 27000000, 31990000, 0, TRUE, 'iphone-15-128-gbden.webp'),
+('PB002', 'SP001', 'Đen Titan', '8GB', '512GB', '4422 mAh', 32000000, 37990000, 0, TRUE, 'iphone-15-128-gbden.webp'),
+('PB003', 'SP002', 'Xám Titanium', '12GB', '256GB', '5000 mAh', 25000000, 29990000, 0, TRUE, 'iphone-15-pro-256gb.webp'),
+('PB004', 'SP003', 'Xanh Lá', '12GB', '256GB', '4610 mAh', 18000000, 22990000, 0, TRUE, 'iphone_17_256gb-3_3.jpg'),
+('PB005', 'SP004', 'Xám Space', '8GB', '64GB', '28.6 Wh', 12000000, 14990000, 0, TRUE, 'iphone-14-pro_2__5.png');
 -- --------------------------------------------------------
 
 INSERT INTO NhaCungCap (MaNCC, TenNCC, DiaChi, Sdt) VALUES 
