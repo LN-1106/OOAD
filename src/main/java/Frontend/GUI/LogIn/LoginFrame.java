@@ -25,7 +25,7 @@ public class LoginFrame extends JFrame {
     }
 
     private void initUI() {
-        setTitle("Sound Store - Hệ thống quản lý");
+        setTitle("Misi - Hệ thống quản lý");
         setSize(1000, 650);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -74,16 +74,16 @@ public class LoginFrame extends JFrame {
         }
 
         // --- CÁC THÀNH PHẦN VĂN BẢN TRÊN PANEL BÊN TRÁI ---
-        JLabel lblLogo = new JLabel("SOUND STORE");
+        JLabel lblLogo = new JLabel("MISI PHONE");
         lblLogo.setFont(new Font("Segoe UI", Font.BOLD, 42));
         lblLogo.setForeground(Color.WHITE);
 
         JLabel lblDescription = new JLabel(
-                "<html><center>Giải pháp quản lý kho hàng và doanh thu<br>dành riêng cho thiết bị âm thanh cao cấp</center></html>");
+                "<html><center>Giải pháp quản lý kho hàng và doanh thu<br>dành riêng cho điện thoại cao cấp</center></html>");
         lblDescription.setFont(new Font("Segoe UI", Font.PLAIN, 17));
         lblDescription.setForeground(new Color(240, 240, 240));
 
-        JLabel lblVersion = new JLabel("Phiên bản 1.3.0 • Bảo mật bởi SoundStore Team");
+        JLabel lblVersion = new JLabel("Phiên bản 1.3.0 • Bảo mật bởi Misi Phone");
         lblVersion.setFont(new Font("Segoe UI", Font.ITALIC, 11));
         lblVersion.setForeground(new Color(255, 255, 255, 150));
 

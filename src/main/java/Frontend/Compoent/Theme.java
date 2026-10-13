@@ -7,8 +7,8 @@ import java.awt.*;
 
 public class Theme {
     // Tông màu chủ đạo: Xám xanh nhẹ
-    public static final Color PRIMARY_COLOR = new Color(53, 59, 71); // Màu chính cho Header & Sidebar
-    public static final Color SECONDARY_COLOR = new Color(47, 54, 64);
+    public static final Color PRIMARY_COLOR = new Color(39, 38, 51); // Màu chính cho Header & Sidebar
+    public static final Color SECONDARY_COLOR = new Color(39, 38, 51);
     public static final Color BACKGROUND_COLOR = new Color(245, 246, 250); // Màu nền app (Trắng xám nhẹ)
 
     // Màu chức năng

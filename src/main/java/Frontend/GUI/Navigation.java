@@ -30,10 +30,12 @@ public class Navigation extends JPanel{
 
         add(userBox, "left");
 
-        JLabel lblLogo = new JLabel("SoundWave Store");
+        JLabel lblLogo = new JLabel("Misi Phone");
         lblLogo.setFont(new Font("Segoe UI", Font.BOLD, 34));
         lblLogo.setForeground(Color.WHITE);
         
         add(lblLogo, "center");
     }
+ 
+    
 }

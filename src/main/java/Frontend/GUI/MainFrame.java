@@ -8,7 +8,7 @@ public class MainFrame extends JFrame {
     private JPanel mainContent;
 
     public MainFrame(String userName, String maNQ) {
-        setTitle("Cửa hàng thiết bị âm thanh " + userName);
+        setTitle("Cửa hàng điện thoại " + userName);
         setSize(1400, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -35,7 +35,7 @@ public class MainFrame extends JFrame {
             Image scaled = icon.getImage().getScaledInstance(600, -1, Image.SCALE_SMOOTH);
             lblImage.setIcon(new ImageIcon(scaled));
         } catch (Exception e) {
-            lblImage.setText("🎧"); 
+            lblImage.setText("📱"); 
             lblImage.setFont(new Font("Segoe UI", Font.PLAIN, 200));
             lblImage.setForeground(new Color(200, 200, 200));
         }
